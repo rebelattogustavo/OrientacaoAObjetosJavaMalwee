@@ -1,6 +1,10 @@
-package br.com.senai;
+package br.com.senai.exemplo;
+
+import java.util.List;
 
 public class Carro {
+	
+	
 	private String marca;
 	private String modelo;
 	private int ano;
