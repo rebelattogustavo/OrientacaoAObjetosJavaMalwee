@@ -39,22 +39,65 @@ public class PessoaController {
 		System.out.print("Informe a altura: ");
 		pessoa.setAltura(tec.nextDouble());
 		
+		System.out.print("Informe o país: ");
+		tec.nextLine();
+		pessoa.setNomeDoPais(tec.nextLine());
+		
+		System.out.print("Informe a sigla do país: ");
+		pessoa.setSiglaDoPais(tec.next());
+		
+		System.out.print("Informe o nome do estado: ");
+		tec.nextLine();
+		pessoa.setNomeDoEstado(tec.nextLine());
+		
+		System.out.print("Informe a sigla do estado: ");
+		
+		pessoa.setSiglaDoEstado(tec.next());
+		
+		System.out.print("Informe o nome da cidade: ");
+		tec.nextLine();
+		pessoa.setNomeDaCidade(tec.nextLine());
+		
+		System.out.print("Informe o bairro: ");
+		pessoa.setNomeDoBairro(tec.nextLine());
+		
+		System.out.print("Informe o nome da rua: ");
+		pessoa.setNomeDaRua(tec.nextLine());
+		
+		System.out.print("Informe o número da casa: ");
+		pessoa.setNumeroDaCasa(tec.nextInt());
+		
+		System.out.print("Informe o complemento: ");
+		pessoa.setComplemento(tec.next());
+		
 		return pessoa;
 	}
 	public List<Pessoa> listarPessoas(List<Pessoa> pessoas){
 		System.out.println("--- PESSOAS CADASTRADAS ---");
 		
-		System.out.printf("| %20s | %6s | %5s | %6s |\n", "Nome", "Ano", "Idade", "Altura");
+		System.out.printf("| %20s | %4s | %5s | %6s | %10s | %15s | %20s | %15s | %20s | %20s | %20s | %15s | %10s | \n", "Nome", "Ano", "Idade", "Altura"
+				, "País", "Sigla do País", "Nome do estado", "Sigla do estado", "Nome da cidade", "Nome do bairro", "Nome da rua", "Número da casa", "Complemento");
 		
 		for(int i = 0; i < pessoas.size(); i++){
-		System.out.printf("| %20s | %4d | %5d | %4.2f",
+		System.out.printf("| %20s | %4d | %5d | %6.2f | %10s | %15s | %20s | %15s | %20s | %20s | %20s | %15d | %11s |  \n",
 				pessoas.get(i).getNome(),
 				pessoas.get(i).getAnoDeNascimento(),
 				pessoas.get(i).getIdade(),
-				pessoas.get(i).getAltura());
-			
+				pessoas.get(i).getAltura(),
+				pessoas.get(i).getNomeDoPais(),
+				pessoas.get(i).getSiglaDoPais(),
+				pessoas.get(i).getNomeDoEstado(),
+				pessoas.get(i).getSiglaDoEstado(),
+				pessoas.get(i).getNomeDaCidade(),
+				pessoas.get(i).getNomeDoBairro(),
+				pessoas.get(i).getNomeDaRua(),
+				pessoas.get(i).getNumeroDaCasa(),
+				pessoas.get(i).getComplemento());
 		}
 		return pessoas;
 	}
+
+	
+		
 
 }
