@@ -14,11 +14,11 @@ public class Produto {
 	public Produto() {
 	}
 	
-	public Produto(String nomeDoProduto, double valorDoUnitarioDoProduto, double valorTotalDoProduto,
+	public Produto(String nomeDoProduto, double valorUnitarioDoProduto, double valorTotalDoProduto,
 			int quantidadeDoProduto) {
 		super();
 		this.nomeDoProduto = nomeDoProduto;
-		this.valorUnitarioDoProduto = valorDoUnitarioDoProduto;
+		this.valorUnitarioDoProduto = valorUnitarioDoProduto;
 		this.valorTotalDoProduto = valorTotalDoProduto;
 		this.quantidadeDoProduto = quantidadeDoProduto;
 	}
@@ -32,11 +32,11 @@ public class Produto {
 	public void setNomeDoProduto(String nomeDoProduto) {
 		this.nomeDoProduto = nomeDoProduto;
 	}
-	public double getValorDoUnitarioDoProduto() {
+	public double getValorUnitarioDoProduto() {
 		return valorUnitarioDoProduto;
 	}
-	public void setValorDoUnitarioDoProduto(double valorDoUnitarioDoProduto) {
-		this.valorUnitarioDoProduto = valorDoUnitarioDoProduto;
+	public void setValorUnitarioDoProduto(double valorUnitarioDoProduto) {
+		this.valorUnitarioDoProduto = valorUnitarioDoProduto;
 	}
 	public double getValorTotalDoProduto() {
 		return valorTotalDoProduto;
