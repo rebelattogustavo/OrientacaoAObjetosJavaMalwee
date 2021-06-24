@@ -154,4 +154,10 @@ public List<Produto> editarProduto(List<Produto> produtos) {
 		produtos.remove(idProduto);
 	}
 	
+	public void menu(List<Produto> produtos) {
+		System.out.println("");
+		
+	}
+	
+	
 }

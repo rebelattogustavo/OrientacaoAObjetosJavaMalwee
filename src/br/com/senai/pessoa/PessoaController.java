@@ -22,15 +22,17 @@ public class PessoaController {
 
 	public void menu() {
 		System.out.println("\n--- MENU ---");
-		System.out.println("1) Cadastrar pessoa");
-		System.out.println("2) Listar pessoas cadastradas");
-		System.out.println("3) Cadastrar produtos");
+		System.out.println("1) Menu pessoa");
+		System.out.println("2) Menu produto");
+		System.out.println("3) Menu venda");
 		System.out.println("4) Listar produtos");
 		System.out.println("5) Editar produto");
 		System.out.println("6) Excluir produto");
 		System.out.println("7) Editar pessoa");
 		System.out.println("8) Excluir pessoa");
-		System.out.println("9) Sair do sistema");
+		System.out.println("9) Cadastrar vendas");
+		System.out.println("10) Listar venda");
+		System.out.println("11) Sair do sistema");
 		System.out.println("-------------------");
 	}
 	public Pessoa cadastrarPessoa() {
@@ -437,6 +439,14 @@ public class PessoaController {
 		pessoas.remove(idProduto);
 	}
 	
+	public void menu(List<Pessoa> pessoas) {
+		System.out.println("--- MENU PESSOAS ---");
+		System.out.println("1) Cadastrar pessoa");
+		System.out.println("2) Listar pessoa");
 		
+		
+	}
+	
+	
 
 }
