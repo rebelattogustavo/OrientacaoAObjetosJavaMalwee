@@ -20,21 +20,6 @@ public class PessoaController {
 	}
 	
 
-	public void menu() {
-		System.out.println("\n--- MENU ---");
-		System.out.println("1) Menu pessoa");
-		System.out.println("2) Menu produto");
-		System.out.println("3) Menu venda");
-		System.out.println("4) Listar produtos");
-		System.out.println("5) Editar produto");
-		System.out.println("6) Excluir produto");
-		System.out.println("7) Editar pessoa");
-		System.out.println("8) Excluir pessoa");
-		System.out.println("9) Cadastrar vendas");
-		System.out.println("10) Listar venda");
-		System.out.println("11) Sair do sistema");
-		System.out.println("-------------------");
-	}
 	public Pessoa cadastrarPessoa() {
 		Pessoa pessoa = new Pessoa();
 		
@@ -439,12 +424,32 @@ public class PessoaController {
 		pessoas.remove(idProduto);
 	}
 	
-	public void menu(List<Pessoa> pessoas) {
+	public void menuPessoa(List<Pessoa> pessoas) {
 		System.out.println("--- MENU PESSOAS ---");
 		System.out.println("1) Cadastrar pessoa");
 		System.out.println("2) Listar pessoa");
-		
-		
+		System.out.println("3) Editar pessoa");
+		System.out.println("4) Excluir pessoa");
+		System.out.println("--------------------");
+		System.out.print("Informe a opção que deseja: ");
+		int opcao = tec.nextInt();
+		switch(opcao) {
+		case 1:
+			pessoas.add(cadastrarPessoa());
+			break;
+		case 2: 
+			listarPessoas(pessoas);
+			break;
+		case 3: 
+			editarPessoa(pessoas);
+			break;
+		case 4:
+			excluirPessoa(pessoas);
+			break;
+		default:
+			System.out.println("Opçao inválida");
+			break;
+		}
 	}
 	
 	

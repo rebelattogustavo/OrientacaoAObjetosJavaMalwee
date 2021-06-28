@@ -60,14 +60,6 @@ public class VendaController {
 		Produto produto = new Produto();
 		Pessoa pessoa = new Pessoa ();
 		
-		System.out.print("Informe o Id da pessoa: ");
-		int idPessoa = tec.nextInt() - 1;
-		
-		pessoa.setNome(pessoas.get(idPessoa).getNome());
-		pessoa.setAltura(pessoas.get(idPessoa).getAltura());
-		pessoa.setAnoDeNascimento(pessoas.get(idPessoa).getAnoDeNascimento());
-		
-		venda.setPessoa(pessoa);
 		
 		System.out.print("Informe o Id do produto: ");
 		int idProduto = tec.nextInt() - 1;
@@ -79,6 +71,17 @@ public class VendaController {
 
 		venda.setProduto(produto);
 		
+		
+		System.out.print("Informe o Id da pessoa: ");
+		int idPessoa = tec.nextInt() - 1;
+		
+		pessoa.setNome(pessoas.get(idPessoa).getNome());
+		pessoa.setAltura(pessoas.get(idPessoa).getAltura());
+		pessoa.setAnoDeNascimento(pessoas.get(idPessoa).getAnoDeNascimento());
+		
+		venda.setPessoa(pessoa);
+		
+		
 		System.out.print("Informe a quantidade desejada: ");
 		venda.setQuantidade(tec.nextInt());
 		
@@ -87,16 +90,17 @@ public class VendaController {
 		return venda;
 	}
 	
-	public void menu(List <Venda> vendas, List<Produto> produtos, List <Pessoa> pessoas) {
+	public void menuVenda(List <Venda> vendas, List<Produto> produtos, List <Pessoa> pessoas) {
 		System.out.println("--- MENU DE VENDA ---");
 		System.out.println("1) Cadastrar venda");
 		System.out.println("2) Listar venda");
-		
+		System.out.println("---------------------");
+		System.out.print("Informe a opção desejada: ");
 		
 		int opcao = tec.nextInt();
 		switch (opcao) {
 		case 1:
-			vendas.add(cadastrarVenda());
+			vendas.add(cadastrarVenda(produtos, pessoas));
 			break;
 		
 		case 2:

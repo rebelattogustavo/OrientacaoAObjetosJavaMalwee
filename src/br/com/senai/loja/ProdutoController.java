@@ -154,8 +154,31 @@ public List<Produto> editarProduto(List<Produto> produtos) {
 		produtos.remove(idProduto);
 	}
 	
-	public void menu(List<Produto> produtos) {
-		System.out.println("");
+	public void menuProduto(List<Produto> produtos) {
+		System.out.println("1) Cadastrar produto");
+		System.out.println("2) Listar produtos");
+		System.out.println("3) Editar produto");
+		System.out.println("4) Excluir produto");
+		System.out.println("--------------------");
+		System.out.print("Informe a opção desejada: ");
+		
+		int opcao = tec.nextInt();
+		switch(opcao) {
+		case 1:
+			produtos.add(cadastrarProduto());
+			break;
+		case 2:
+			listarProdutos(produtos);
+			break;
+		case 3:
+			editarProduto(produtos);
+			break;
+		case 4:
+			excluirProduto(produtos);
+			break;
+		default:
+			System.out.println("Opção inválida");
+		}
 		
 	}
 	
